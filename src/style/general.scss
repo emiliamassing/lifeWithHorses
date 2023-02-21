@@ -1,2 +1,10 @@
-@import 'normalize';
-@import 'base';
+@use 'normalize';
+@use 'base';
+
+@media screen and (min-width: 601px){
+    @import 'tablet';
+}
+
+@media screen and (min-width: 901px){
+    @import 'desktop';
+}
