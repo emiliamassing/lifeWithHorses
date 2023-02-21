@@ -14,9 +14,14 @@
     <title>Life As An Equestrian</title>
   </head>
   <body>
-    <div class="Start">
+    <div class="start">
       <header>
-          <img src="/src/img/header.jpg" alt="girl and gray shirehorse">
+          <picture>
+            <source media="(max-width: 600px)" srcset="/src/img/headerMobile.jpg">
+            <source media="(min-width: 601px) and (max-width: 900px)" srcset="/src/img/headerTablet.jpg">
+            <source media="(min-width: 901px)" srcset="/src/img/headerDesktop.jpg">
+            <img src="/src/img/headerMobile.jpg" alt="girl and gray shirehorse">
+          </picture>
       </header>
       <nav>
         <ul id="menu">
