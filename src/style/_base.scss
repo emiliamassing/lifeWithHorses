@@ -39,6 +39,9 @@ body {
 }
 
 nav{
+    background-color: #333333bb;
+    height: 70vh;
+
     .toggleMenu {
         background-color: transparent;
         position: absolute;
@@ -76,13 +79,29 @@ nav{
 
     .menuLinks ul{
         width: 100%;
-        height: 100%;
+        height: 46vh;
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         li{
             list-style-type: none;
             text-align: center;
+            text-transform: uppercase;
+            margin-top: 3em;
+
+            a{
+                text-decoration: none;
+                color: var.$menuColor;
+                font-size: 1.5rem;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 
