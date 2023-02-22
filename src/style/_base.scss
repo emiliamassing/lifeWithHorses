@@ -115,3 +115,41 @@ nav{
         @include removeVisuallyHidden();
     }
 }
+
+nav{
+    .toggleMenu {
+        background-color: transparent;
+        position: absolute;
+        margin-top: 8px;
+        height: 45px;
+        width: 45px;
+        top: 2px;
+        right: 0.5rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    span.menuBar {
+        display: block;
+        height: 3.5px;
+        width: 35px;
+        background-color: var.$menuColor;
+        margin-bottom: 5px;
+        border-radius: 4px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .toggleMenu:focus span.menuBar:nth-child(2) {
+        opacity: 0;
+    }
+      
+    .toggleMenu:focus span.menuBar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .toggleMenu:focus span.menuBar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+}
