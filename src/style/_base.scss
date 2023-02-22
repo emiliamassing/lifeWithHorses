@@ -13,14 +13,29 @@
     overflow: hidden;
 }
 
-body {
-    background-color: var.$bgColor;
+@mixin removeVisuallyHidden {
+    position: unset;
+    width: unset;
+    height: unset;
+    margin: unset;
+    border: unset;
+    padding: unset;
+  
+    white-space: unset;
+    clip-path: unset;
+    clip: unset;
+    overflow: unset;
 }
 
-header {
-    img {
-        width: 100%;
-    }
+body {
+    background-color: var.$bgColor;
+    font-family: var.$usualFont;
+}
+
+.start{
+    background-image: url(/src/img/headerMobile.jpg);
+    background-size: cover;
+    min-height: 50vh;
 }
 
 nav{
@@ -59,4 +74,24 @@ nav{
         transform: translateY(-10px) rotate(-45deg);
     }
 
+    .menuLinks ul{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        li{
+            list-style-type: none;
+            text-align: center;
+        }
+    }
+
+    /*.menuLinks{
+        width: 100%;
+        @include visuallyHidden();
+    }
+
+    .menuLinks.active {
+        @include removeVisuallyHidden();
+    }*/
 }
