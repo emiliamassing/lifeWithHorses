@@ -9,9 +9,9 @@ menuButton.addEventListener('click', toggleMenu);
 });
 
 function toggleMenu(): void {
-    menuOpen = !menuOpen; //Gör att menyn får värdet true
+    menuOpen = !menuOpen;
     if (!menuOpen) {
-    menuButton.blur(); // Tar bort fokus från knappen
+    menuButton.blur(); 
     }
     if (menuOpen) {
     menuButton.classList.add('active');
@@ -27,5 +27,6 @@ function closeMenu(): void {
     menuOpen = false;
     menuButton.blur();
     menuButton.classList.remove('active');
+    menuUl.classList.remove('active');
     menuButton.setAttribute('aria-expanded', 'false');
 }
