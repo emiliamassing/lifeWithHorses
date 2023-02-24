@@ -205,4 +205,13 @@ main{
             }
         }
     }
+
+    footer{
+        background-color: var.$bgColor;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding: 2em;
+        text-align: center;
+        font-size: 1.1rem;
+    }
 }
